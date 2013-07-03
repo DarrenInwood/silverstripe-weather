@@ -26,47 +26,43 @@ Extract to your project root, then run /dev/build?flush=1 to tell SilverStripe a
 
 The module adds a Weather object to all Content Controllers, allowing you to use various details in templates.
 
-<code>
-<% control Weather %>
-$Title - $Temperature
-<% end_control %>
-</code>
+> <% control Weather %>
+> $Title - $Temperature
+> <% end_control %>
 
 The full list of details available is:
 
-$Title - eg. "Conditions for Sunnyvale, CA at 11:55 am PDT"
-$Link - Link to the full weather report on Yahoo
-$Description - HTML description of the weather
-$PublishedDate - When this data was measured. Can use date functions, eg. $PublishedDate.Long
-$Latitude - The latitude of the place
-$Longitude - The longitude of the place
-$City - Name of the city for this weather report, eg. "Sunnyvale"
-$Region - Region, eg. "CA"
-$Country - Country, eg. "United States"
-$Condition - Short description, eg. "Fair"
-$Temperature - eg. "22°C"
-$TemperatureInt - eg. 22
-$Image - an icon representing the weather conditions.  To override these, check WeatherDecorator::$weather_image_map
-$WindChill - Temperature including wind chill factor, eg. "18°C"
-$WindDirection  - eg. "350°"
-$WindSpeed - eg. "12kph"
-$Humidity - eg. "88%"
-$Visibility - eg. "40km"
-$BarometricPressure - eg. "1.2kpa"
-$SunriseTime - Date object representing sunrise. Use with normal date formatting functions
-$SunsetTime - Date representing sunset time
+ * $Title - eg. "Conditions for Sunnyvale, CA at 11:55 am PDT"
+ * $Link - Link to the full weather report on Yahoo
+ * $Description - HTML description of the weather
+ * $PublishedDate - When this data was measured. Can use date functions, eg. $PublishedDate.Long
+ * $Latitude - The latitude of the place
+ * $Longitude - The longitude of the place
+ * $City - Name of the city for this weather report, eg. "Sunnyvale"
+ * $Region - Region, eg. "CA"
+ * $Country - Country, eg. "United States"
+ * $Condition - Short description, eg. "Fair"
+ * $Temperature - eg. "22°C"
+ * $TemperatureInt - eg. 22
+ * $Image - an icon representing the weather conditions.  To override these, check WeatherDecorator::$weather_image_map
+ * $WindChill - Temperature including wind chill factor, eg. "18°C"
+ * $WindDirection  - eg. "350°"
+ * $WindSpeed - eg. "12kph"
+ * $Humidity - eg. "88%"
+ * $Visibility - eg. "40km"
+ * $BarometricPressure - eg. "1.2kpa"
+ * $SunriseTime - Date object representing sunrise. Use with normal date formatting functions
+ * $SunsetTime - Date representing sunset time
 
 There is also a list of Forecasts you can access:
 
-<code>
-<% control Weather %>
-<ul>
-<% control Forecasts %>
-	<li>$Image {$Date.Long}: $Condition ($TemperatureLow - $TemperatureHigh)
-<% end_control %>
-</ul>
-<% end_control %>
-</code>
+> <% control Weather %>
+> <ul>
+> <% control Forecasts %>
+> 	<li>$Image {$Date.Long}: $Condition ($TemperatureLow - $TemperatureHigh)
+> <% end_control %>
+> </ul>
+> <% end_control %>
 
 ## Configuration
 
