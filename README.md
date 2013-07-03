@@ -26,9 +26,9 @@ Extract to your project root, then run /dev/build?flush=1 to tell SilverStripe a
 
 The module adds a Weather object to all Content Controllers, allowing you to use various details in templates.
 
-> <% control Weather %>
-> $Title - $Temperature
-> <% end_control %>
+    <% control Weather %>
+    $Title - $Temperature
+    <% end_control %>
 
 The full list of details available is:
 
@@ -56,13 +56,13 @@ The full list of details available is:
 
 There is also a list of Forecasts you can access:
 
-> <% control Weather %>
-> <ul>
-> <% control Forecasts %>
-> 	<li>$Image {$Date.Long}: $Condition ($TemperatureLow - $TemperatureHigh)
-> <% end_control %>
-> </ul>
-> <% end_control %>
+    <% control Weather %>
+    <ul>
+    <% control Forecasts %>
+        <li>$Image {$Date.Long}: $Condition ($TemperatureLow - $TemperatureHigh)
+    <% end_control %>
+    </ul>
+    <% end_control %>
 
 ## Configuration
 
